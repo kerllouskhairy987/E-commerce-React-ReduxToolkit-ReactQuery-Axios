@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+    --bg-body : #242424;
+}
+
+body {
+    background-color: var(--bg-body)
+}
+
+ul li a.active {
+    color: #5046E6;
+}

@@ -1,0 +1,35 @@
+✅ Install Vite Project
+
+✅ Install react-router-dom 
+
+✅ Install Tailwind css
+
+✅ Pages ==> {
+    PageNotFound
+
+}
+
+✅ Shared component (ui) {
+    Button
+    ErrorMessage
+    Input
+    Modal
+    textArea
+}
+
+✅ Component {
+    Navbar
+    ProductCart
+}
+
+/////////////////////////
+
+✅ install react-query {
+    - install 
+    - go to over view in documentation to copy that code and paste it in main.tsx
+    - Custom hook using react query 
+}
+
+✅ Product card 
+
+✅ Skeleton While Loading 
