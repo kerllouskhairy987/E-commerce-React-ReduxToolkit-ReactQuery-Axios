@@ -42,3 +42,10 @@
     }
 }
 
+✅ create cartSlice.ts 
+
+✅ adding Product to local storage {
+    - adding counter to cart in navbar (this counter come from local storage)
+    - if this product is exist in local storage do not add it
+    - look at utils/functions.ts 
+}

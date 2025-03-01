@@ -7,4 +7,5 @@ export interface IProduct {
     thumbnail: string;
     discountPercentage: number;
     rating?: number;
+    quantity: number
 }

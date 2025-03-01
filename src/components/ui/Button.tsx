@@ -13,7 +13,7 @@ const Button = ({ type, width = "w-full", className, isLoading, children, ...res
     return (
         <button
         type={type}
-            className={`${className} bg-[#5046E6] py-2 px-4 sm:p-2 font-medium text-xl text-white outline-none rounded hover:shadow-2xl active:scale-95 
+            className={`${className} bg-[#5046E6] py-2 px-4 sm:p-2 font-medium text-sm text-white outline-none rounded hover:shadow-2xl active:scale-95 
                 ${width} flex justify-center items-center disabled:bg-indigo-400 disabled:hover:bg-indigo-400 disabled:cursor-not-allowed`}
 
             disabled={isLoading}

@@ -1,17 +1,18 @@
-
 import { FaCartPlus, FaEye } from "react-icons/fa";
 import CardSkeleton from "../components/Skeletons";
 import Button from "../components/ui/Button";
 import GetProductsCustomHook from "../hooks/GetProducts";
 import { IProduct } from "../interfaces";
+import { useDispatch } from "react-redux";
+import { addItemsToCart } from "../app/features/cart/cartSlice";
 
 const HomePage = () => {
 
     const { data, isLoading } = GetProductsCustomHook({ queryKey: ["products"], url: "/products" });
 
-    console.log(data, isLoading);
+    // console.log(data, isLoading);
 
-    console.log(data?.products);
+    // console.log(data?.products);
 
     if (isLoading) {
         return (
@@ -27,12 +28,14 @@ const HomePage = () => {
         )
     }
 
+    const dispatch = useDispatch();
 
 
     return (
         <div className="container mx-auto py-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-4 sm:px-0">
             {
-                data?.products.map(({ id, title, description, price, thumbnail, discountPercentage }: IProduct) => {
+                data?.products.map((product: IProduct) => {
+                    const { id, title, thumbnail, description, price, discountPercentage } = product;
                     return (
                         <div className="relative overflow-hidden bg-white p-3 rounded-md flex flex-col space-y-3 border border-blue-300" key={id}>
                             <p className="absolute top-0 left-0  bg-gray-400 text-white px-2">{discountPercentage} %</p>
@@ -47,7 +50,13 @@ const HomePage = () => {
 
                             <div className="flex items-center space-x-3 justify-between">
                                 <Button width="w-full" className="flex gap-2 cursor-pointer bg-green-500"><FaEye /> View Product</Button>
-                                <Button width="w-full" className="flex gap-2 cursor-pointer"><FaCartPlus /> Add To cart</Button>
+                                <Button
+                                    width="w-full"
+                                    className="flex gap-2 cursor-pointer"
+                                    onClick={() => dispatch(addItemsToCart(product))}
+                                >
+                                    <FaCartPlus /> Add To cart
+                                </Button>
                             </div>
 
                         </div>
