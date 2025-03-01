@@ -33,3 +33,12 @@
 ✅ Product card 
 
 ✅ Skeleton While Loading 
+
+✅ adding redux toolkit {
+    - adding provider to main.tsx
+    - create app folder: {
+        - create store.ts [which import all slices in it],
+        - create cartSlice.ts in cart folder,
+    }
+}
+

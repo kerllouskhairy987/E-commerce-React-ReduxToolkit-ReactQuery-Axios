@@ -19,6 +19,6 @@ export const cartSlice = createSlice({
     },
 })
 
-// export const { increaseAction } = counterSlice.actions
+// export const { increaseAction } = cartSlice.actions
 
 export default cartSlice.reducer
